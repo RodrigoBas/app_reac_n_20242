@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import ListaProdutos from "./Componentes /Adaptadores/ListaProdutos";
+
 const produtos = [
-  { id: 1, nome: "Coca-Cola", preco: 5.5},
-  { id: 2, nome: "Pepsi", preco: 5.5},
-  { id: 3, nome: "Fanta", preco: 5.5},
-  { id: 4, nome: "Guaraná", preco: 5.5},
+  { id: 1, nome: "Coca-Cola", preco: 4.5},
+  { id: 2, nome: "Pepsi", preco: 3.5},
+  { id: 3, nome: "Fanta", preco: 5.1},
+  { id: 4, nome: "Guaraná", preco: 3.9},
 ];
 
 
@@ -13,9 +14,7 @@ const produtos = [
 export default function Index() {
   let [contador,setContador] = useState(0)
   return (
-    <View
-    style={estilo.container}
-    >
+    <View style={estilo.container}>
       <ListaProdutos produtos={produtos}></ListaProdutos>    
       <Button title={contador.toString()}
        onPress={()=>{Clicarbotao()}}></Button>
@@ -30,10 +29,6 @@ export default function Index() {
 const estilo = StyleSheet.create({
   container:{
     flex: 1,
-      justifyContent: "center",
-      alignItems: "flex-start",
-      backgroundColor: "#2f2f2f",
-      paddingStart: 20,
   },
   Text: {
     color:"#ffffff",
