@@ -1,7 +1,8 @@
 import { View } from "react-native";
-import ItemProduto from "../ItemProduto";
+import ItemProduto from "../ItemProduto"
 
-function ListaProdutos({produtos}:{produtos:[]}){
+function ListaProdutos({produtos}:
+            {produtos: {nome:string, preco:number}[]}){
     return (
     <View>
         {produtos.map((p)=> 
@@ -13,3 +14,5 @@ function ListaProdutos({produtos}:{produtos:[]}){
     </View>
     )
 }
+
+export default ListaProdutos
