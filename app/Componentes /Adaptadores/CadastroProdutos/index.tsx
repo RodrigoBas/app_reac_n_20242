@@ -13,3 +13,4 @@ let [descricao,setDescricao] = useState ('')
         </View>
     )
 }
+export default CadastroProduto
