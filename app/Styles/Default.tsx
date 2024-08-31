@@ -27,6 +27,12 @@ const Style = StyleSheet.create({
       color: '#8B0000',
       fontWeight: "bold"
     },
+    image:{
+      width:250,
+      height:250,
+      objectFit:"contain",
+      resizeMode:"contain",
+    }
   });
 
   export default Style
