@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import ListaProdutos from "./Componentes /Adaptadores/ListaProdutos";
+import ListaProdutos from "./Componentes/Adaptadores/ListaProdutos";
 import axios from "axios"
 import { useEffect } from "react";
-import CadastroProduto from "./Componentes /Adaptadores/CadastroProdutos"
+import CadastroProduto from "./Componentes/Adaptadores/CadastroProdutos"
 
 
 
@@ -17,14 +17,15 @@ export default function Index() {
 
 
 function carregarProdutos(){
-  axios.get('https://app-api-tapwm.onrender.com/api/produtos')
+  axios.get('https://api-docker-2t8m.onrender.com/api/produtos')
   .then((resp)=>{
     setProdutos(resp.data);
   })
 }
 
   return (
-    <View style={estilo.container}>
+    <View style={estilo.container}
+    >
       <ListaProdutos produtos={produtos}></ListaProdutos>    
       <Button title={contador.toString()}
        onPress={()=>{Clicarbotao()}}></Button>

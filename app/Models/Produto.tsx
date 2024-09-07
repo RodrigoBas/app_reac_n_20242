@@ -1,4 +1,3 @@
-import { forceTouchGestureHandlerProps } from "react-native-gesture-handler/lib/typescript/handlers/ForceTouchGestureHandler"
 
 enum categoria{
     "ração",

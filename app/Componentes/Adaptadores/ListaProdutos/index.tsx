@@ -1,11 +1,11 @@
 import { ScrollView, View } from "react-native";
 import ItemProduto from "../ItemProduto"
 import Style from "@/app/Styles/Default";
-import Produtos from "@/app/Models/Produto"
+import Produto from "@/app/Models/Produto"
 import React from "react";
 
 function ListaProdutos({produtos}:
-            {produtos: Produtos[]}){
+            {produtos: Produto[]}){
     return (
     <ScrollView>
         <View style= {Style.container}>
@@ -18,4 +18,4 @@ function ListaProdutos({produtos}:
     )
 }
 
-export default ListaProdutos
+export default ListaProdutos;
