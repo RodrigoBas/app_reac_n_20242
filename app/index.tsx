@@ -1,35 +1,36 @@
 import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import ListaProdutos from "./Componentes/Adaptadores/ListaProdutos";
-import axios from "axios"
+import ListaProdutos from "./Componentes/Adaptadores/ListaProdutos"
+import axios from "axios";
 import { useEffect } from "react";
-import CadastroProduto from "./Componentes/Adaptadores/CadastroProdutos"
+import CadastroProduto from "./Componentes/Adaptadores/CadastroProdutos";
+
 
 
 
 export default function Index() {
   let [contador,setContador] = useState(0);
-  let [produtos, setProdutos] = useState([]);
+  let [produtos,setProdutos] = useState([]);
 
     useEffect(()=>{
-      carregarProdutos
+      carregarProdutos()
     },[])
 
+  function carregarProdutos(){
+    axios.get('https://api-docker-2t8m.onrender.com/api/produtos')
+    .then((resp)=>{ 
+      setProdutos(resp.data);
+    })
 
-function carregarProdutos(){
-  axios.get('https://api-docker-2t8m.onrender.com/api/produtos')
-  .then((resp)=>{
-    setProdutos(resp.data);
-  })
-}
+  }
 
   return (
     <View style={estilo.container}
     >
-      <ListaProdutos produtos={produtos}></ListaProdutos>    
+      <ListaProdutos produtos={produtos}></ListaProdutos>
       <Button title={contador.toString()}
        onPress={()=>{Clicarbotao()}}></Button>
-       <CadastroProduto/>
+      <CadastroProduto/>
 
     </View>
     );
@@ -52,5 +53,4 @@ const estilo = StyleSheet.create({
     textAlign: "left",
     fontWeight: "bold"
   },
-  
 });

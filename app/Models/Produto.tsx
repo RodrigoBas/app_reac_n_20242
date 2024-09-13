@@ -4,11 +4,11 @@ enum categoria{
     "brinquedos"
 }
 
-export default interface Produto{ 
+export default interface Produto{
     id:number,
     nome:string,
     descricao:string,
     foto:string,
-    preco: number,
-    categoria:categoria    
+    preco:number,
+    categoria:categoria 
 }
