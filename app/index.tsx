@@ -5,12 +5,16 @@ import axios from "axios";
 import { useEffect } from "react";
 import CadastroProduto from "./Componentes/Adaptadores/CadastroProdutos";
 import { useRouter } from "expo-router";
+import { useFocusEffect } from "expo-router";
 
 
 
 
 export default function Index() {
   const router = useRouter();
+  useFocusEffect(()=>{
+    carregarProdutos();
+  })
   
   
   let [produtos,setProdutos] = useState([]);
@@ -39,7 +43,7 @@ export default function Index() {
     </View>
     );
   function telaCadastro(){
-      router.push('/cadastro');
+      router.push('/Componentes/Telas/cadastro');
   };
 }
 

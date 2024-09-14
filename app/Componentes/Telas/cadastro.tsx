@@ -1,4 +1,4 @@
-import CadastroProduto from "./Componentes/Adaptadores/CadastroProdutos";
+import CadastroProduto from "../Adaptadores/CadastroProdutos";
 
 export default function Cadastro(){
     return (
