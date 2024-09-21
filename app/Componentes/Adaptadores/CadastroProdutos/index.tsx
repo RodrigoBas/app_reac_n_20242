@@ -18,7 +18,7 @@ let [foto, SetFoto] = useState('');
             <TextInput onChangeText={SetDescricao} value={descricao}/>
             <Text >Foto:</Text>
             <TextInput onChangeText={SetFoto} value={foto}/>
-            <Text >Preço:</Text>
+            <Text >Preço:R$</Text>
             <TextInput onChangeText={
                 (v)=>
                     {
